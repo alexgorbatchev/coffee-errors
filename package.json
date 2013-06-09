@@ -1,0 +1,19 @@
+{
+  "name": "coffee-errors",
+  "main": "./coffee-errors.coffee",
+  "version": "0.8.1",
+  "scripts": {
+    "test": "mocha test/*.spec.coffee"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.alexgorbatchev.com:alexgorbatchev/coffee-errors.git"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "coffee-script": ">=1.6.2",
+    "chai": "~1.6.0",
+    "mocha": "~1.10.0"
+  }
+}
