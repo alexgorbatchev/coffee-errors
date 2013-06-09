@@ -7,6 +7,8 @@ or any other method, the functionality isn't on.
 This is a pretty much straight copy of the original source, except it doesn't compile the source maps until
 necessary therefore speeding up the initial bootup process.
 
+The package reuses `coffee-script` or `iced-coffee-script` in your module.
+
 ## Usage
 
     require 'coffee-errors'

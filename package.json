@@ -2,12 +2,14 @@
   "name": "coffee-errors",
   "main": "./coffee-errors.coffee",
   "version": "0.8.1",
+  "keywords": ["javascript", "language", "coffeescript", "compiler"],
+  "author": "Alex Gorbatchev",
   "scripts": {
     "test": "mocha test/*.spec.coffee"
   },
   "repository": {
     "type": "git",
-    "url": "git@git.alexgorbatchev.com:alexgorbatchev/coffee-errors.git"
+    "url": "git://github.com/alexgorbatchev/coffee-errors.git"
   },
   "dependencies": {
   },
