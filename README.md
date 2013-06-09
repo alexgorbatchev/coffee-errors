@@ -1,6 +1,11 @@
 # coffee-errors
 
-Patches error stack to display correct line numbers.
+Patches error stack to display correct line numbers. CoffeeScript has built in support for this, but it only
+works when the script is executed through the `coffee` command. If you are running mocha, node-dev, jasmine
+or any other method, the functionality isn't on.
+
+This is a pretty much straight copy of the original source, except it doesn't compile the source maps until
+necessary therefore speeding up the initial bootup process.
 
 ## Usage
 
