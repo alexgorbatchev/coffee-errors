@@ -9,6 +9,10 @@ necessary therefore speeding up the initial bootup process.
 
 The package reuses `coffee-script` or `iced-coffee-script` in your module.
 
+## Installation
+
+    npm install coffee-errors
+
 ## Usage
 
     require 'coffee-errors'
