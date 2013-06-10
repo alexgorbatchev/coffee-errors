@@ -29,7 +29,6 @@ patchStackTrace = ->
 
   Error.prepareStackTrace = (err, stack) ->
     try
-      oldPrepeareStackTrack? err, stack
       sourceFiles = {}
 
       getSourceMapping = (filename, line, column) ->
