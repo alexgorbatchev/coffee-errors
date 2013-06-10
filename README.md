@@ -20,7 +20,7 @@ The package reuses `coffee-script` or `iced-coffee-script` in your module.
 ## Results
 
     Error: Hello error
-      at Context.<anonymous> (/coffee-errors/test/coffee-errors.spec.coffee:9:17, <js>:14:15)
+      at Context.<anonymous> (/coffee-errors/test/coffee-errors.spec.coffee:9:17)
       at Test.Runnable.run (/coffee-errors/node_modules/mocha/lib/runnable.js:213:32)
       at Runner.runTest (/coffee-errors/node_modules/mocha/lib/runner.js:351:10)
       at /coffee-errors/node_modules/mocha/lib/runner.js:397:12

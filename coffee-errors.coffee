@@ -8,6 +8,8 @@ catch e
   helpers = require 'coffee-script/lib/coffee-script/helpers'
   coffee  = require 'coffee-script'
 
+throw new Error '`coffee-errors` expects `[iced-]coffee-script@~1.6.3`' if parseInt(coffee.VERSION.replace /\D+/g, '') < 163
+
 compile    = coffee.compile
 patched    = false
 extensions = ['.coffee', '.litcoffee', '.coffee.md']
@@ -26,19 +28,24 @@ patchStackTrace = ->
   # exception is thrown in the module body.)
 
   Error.prepareStackTrace = (err, stack) ->
-    oldPrepeareStackTrack? err, stack
-    sourceFiles = {}
+    try
+      oldPrepeareStackTrack? err, stack
+      sourceFiles = {}
 
-    getSourceMapping = (filename, line, column) ->
-      sourceMap = getSourceMap filename
-      answer = sourceMap.sourceLocation [line - 1, column - 1] if sourceMap
-      if answer then [answer[0] + 1, answer[1] + 1] else null
+      getSourceMapping = (filename, line, column) ->
+        sourceMap = getSourceMap filename
+        answer = sourceMap.sourceLocation [line - 1, column - 1] if sourceMap
+        if answer then [answer[0] + 1, answer[1] + 1] else null
 
-    frames = for frame in stack
-      break if frame.getFunction() is coffee.run
-      "  at #{formatSourcePosition frame, getSourceMapping}"
+      frames = for frame in stack
+        break if frame.getFunction() is coffee.run
+        "  at #{formatSourcePosition frame, getSourceMapping}"
 
-    "#{err.name}: #{err.message ? ''}\n#{frames.join '\n'}\n"
+      "#{err.name}: #{err.message ? ''}\n#{frames.join '\n'}\n"
+    catch e
+      Error.prepareStackTrace = oldPrepeareStackTrack
+      "`coffee-errors` failed during stack parsing, falling back onto the previous parser. " + err.stack
+      err.stack
 
 # Based on http://v8.googlecode.com/svn/branches/bleeding_edge/src/messages.js
 # Modified to handle sourceMap
@@ -62,9 +69,10 @@ formatSourcePosition = (frame, getSourceMapping) ->
 
     # Check for a sourceMap position
     source = getSourceMapping fileName, line, column
+
     fileLocation =
       if source
-        "#{fileName}:#{source[0]}:#{source[1]}, <js>:#{line}:#{column}"
+        "#{fileName}:#{source[0]}:#{source[1]}" #, <js>:#{line}:#{column}"
       else
         "#{fileName}:#{line}:#{column}"
 

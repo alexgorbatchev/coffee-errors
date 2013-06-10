@@ -1,7 +1,7 @@
 {
   "name": "coffee-errors",
   "main": "./coffee-errors.coffee",
-  "version": "0.8.2",
+  "version": "0.8.3",
   "keywords": ["javascript", "language", "coffeescript", "compiler"],
   "author": "Alex Gorbatchev",
   "scripts": {
@@ -14,7 +14,7 @@
   "dependencies": {
   },
   "devDependencies": {
-    "coffee-script": ">=1.6.2",
+    "coffee-script": ">=1.6.3",
     "chai": "~1.6.0",
     "mocha": "~1.10.0"
   }

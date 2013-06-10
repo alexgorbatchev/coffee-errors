@@ -8,6 +8,5 @@ describe 'coffee-errors', ->
     try
       throw new Error 'Hello error'
     catch err
-      console.log err.stack
       expect(err.stack).to.contain 'coffee-errors.spec.coffee:9:17'
 
