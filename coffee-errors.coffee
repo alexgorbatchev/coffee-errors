@@ -21,7 +21,7 @@ patchStackTrace = ->
   return if patched
   patched = true
 
-  oldPrepeareStackTrack = Error.prepareStackTrace
+  oldPrepareStackTrack = Error.prepareStackTrace
 
   # (Assigning to a property of the Module object in the normal module cache is
   # unsuitable, because node deletes those objects from the cache if an
@@ -42,7 +42,7 @@ patchStackTrace = ->
 
       "#{err.name}: #{err.message ? ''}\n#{frames.join '\n'}\n"
     catch e
-      Error.prepareStackTrace = oldPrepeareStackTrack
+      Error.prepareStackTrace = oldPrepareStackTrack
       "`coffee-errors` failed during stack parsing, falling back onto the previous parser. " + err.stack
       err.stack
 
