@@ -8,7 +8,7 @@ catch e
   helpers = require 'coffee-script/lib/coffee-script/helpers'
   coffee  = require 'coffee-script'
 
-throw new Error '`coffee-errors` expects `[iced-]coffee-script@~1.6.3`' if parseInt(coffee.VERSION.replace /\D+/g, '') < 163
+throw new Error '`coffee-errors` expects `[iced-]coffee-script@~1.6.2`' if parseInt(coffee.VERSION.replace /\D+/g, '') < 162
 
 compile    = coffee.compile
 patched    = false
