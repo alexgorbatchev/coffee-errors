@@ -1,14 +1,9 @@
-fs   = require 'fs'
-path = require 'path'
+fs      = require 'fs'
+path    = require 'path'
+helpers = require 'coffee-script/lib/coffee-script/helpers'
+coffee  = require 'coffee-script'
 
-try
-  helpers = require 'iced-coffee-script/lib/coffee-script/helpers'
-  coffee  = require 'iced-coffee-script'
-catch e
-  helpers = require 'coffee-script/lib/coffee-script/helpers'
-  coffee  = require 'coffee-script'
-
-throw new Error '`coffee-errors` expects `[iced-]coffee-script@~1.6.2`' if parseInt(coffee.VERSION.replace /\D+/g, '') < 162
+throw new Error '`coffee-errors` expects `coffee-script@~1.6.2`' if parseInt(coffee.VERSION.replace /\D+/g, '') < 162
 
 compile    = coffee.compile
 patched    = false
