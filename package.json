@@ -1,13 +1,14 @@
 {
   "name": "coffee-errors",
   "main": "./coffee-errors.js",
-  "version": "0.8.5",
+  "version": "0.8.6",
   "description": "Patches error stack to display correct line numbers. CoffeeScript has built in support for this, but it only works when the script is executed through the `coffee` command. If you are running mocha, node-dev, jasmine or any other method, the functionality isn't on.",
   "keywords": ["javascript", "language", "coffeescript", "compiler", "errors"],
   "author": {
     "name": "Alex Gorbatchev",
     "email": "alex.gorbatchev@gmail.com"
   },
+  "license": "MIT",
   "scripts": {
     "test": "./node_modules/.bin/mocha test/*.spec.coffee",
     "pretest": "./node_modules/.bin/coffee --bare --compile *.coffee"
@@ -21,7 +22,7 @@
   },
   "devDependencies": {
     "coffee-script": ">=1.6.2",
-    "chai": "~1.6.0",
-    "mocha": "~1.10.0"
+    "chai": "~1.8.1",
+    "mocha": "~1.17.0"
   }
 }

@@ -48,6 +48,9 @@ Whenever an error is thrown, all stack lines in `.coffee` files will be fixed to
 * [jade-compiler](https://github.com/alexgorbatchev/jade-compiler)
 * [stylus-compiler](https://github.com/alexgorbatchev/stylus-compiler)
 * [coffee-compiler](https://github.com/alexgorbatchev/coffee-compiler)
+* [coffee-errors](https://github.com/alexgorbatchev/coffee-errors)
+* [bubble-boy](https://github.com/alexgorbatchev/bubble-boy)
+* [syntaxhighlighter](https://github.com/alexgorbatchev/syntaxhighlighter)
 
 ## License
 
