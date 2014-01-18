@@ -7,7 +7,10 @@ This is a pretty much straight copy of the original source, except it doesn't co
 The package reuses expects you to have `coffee-script` already installed in your project.
 
 [![Dependency status](https://david-dm.org/alexgorbatchev/coffee-errors.png)](https://david-dm.org/alexgorbatchev/coffee-errors)
-[![Build Status](https://travis-ci.org/alexgorbatchev/coffee-errors.png)](https://travis-ci.org/alexgorbatchev/coffee-errors)
+[![devDependency Status](https://david-dm.org/alexgorbatchev/coffee-errors/dev-status.png)](https://david-dm.org/alexgorbatchev/coffee-errors#info=devDependencies)
+[![Build Status](https://secure.travis-ci.org/alexgorbatchev/coffee-errors.png?branch=master)](https://travis-ci.org/alexgorbatchev/coffee-errors)
+
+[![NPM](https://nodei.co/npm/coffee-errors.png?downloads=true)](https://npmjs.org/package/coffee-errors)
 
 ## Support
 
