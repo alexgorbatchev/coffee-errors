@@ -18,10 +18,10 @@
     "url": "git://github.com/alexgorbatchev/coffee-errors.git"
   },
   "peerDependencies": {
-    "coffee-script": ">=1.6.2"
+    "coffee-script": "~1.6.2"
   },
   "devDependencies": {
-    "coffee-script": ">=1.6.2",
+    "coffee-script": "~1.6.2",
     "chai": "~1.8.1",
     "mocha": "~1.17.0"
   }
