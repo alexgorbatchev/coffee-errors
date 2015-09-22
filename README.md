@@ -1,6 +1,6 @@
 # coffee-errors
 
-> ⚐ This module is [no longer needed](https://github.com/jashkenas/coffeescript/issues/3141) with coffee-script 1.6.4+
+> ⚐ This module is [no longer needed](https://github.com/jashkenas/coffeescript/issues/3141) with coffee-script 1.7.0+
 
 Patches error stack to display correct line numbers. [CoffeeScript](http://coffeescript.org) has built in support for this, but it only works when the script is executed through the `coffee` command. If you are running mocha, node-dev, jasmine or any other method, the functionality isn't on.
 
